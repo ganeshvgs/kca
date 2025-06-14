@@ -1,0 +1,259 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #1e1e2f, #3e3e5e);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6f61;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e85c4f;
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 0;
+}
+
+.section h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e1e2f;
+}
+
+.section p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: #555;
+}
+
+/* Leaders */
+.leaders {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.leader-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.leader-box:hover {
+  transform: translateY(-5px);
+}
+
+.leader-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.leader-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.leader-title {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Services */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-box h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1e1e2f;
+}
+
+.service-box p {
+  color: #555;
+}
+
+/* Certificate Section */
+.certificate-box {
+  background: #fff;
+  border: 2px solid #1e1e2f;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.certificate-box h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+}
+
+.certificate-box h3 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.certificate-box h4 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #777;
+}
+
+.certificate-box p {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.certificate-signature {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.certificate-signature div {
+  text-align: center;
+}
+
+/* Contact */
+form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+button.btn {
+  align-self: flex-start;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

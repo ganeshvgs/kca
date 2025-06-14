@@ -6,6 +6,38 @@
   <title>KA20 – Elegance Defined</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    .feedback {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .stars {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+    .star:hover,
+    .star.hovered,
+    .star.selected {
+      color: gold;
+    }
+    .map-section {
+      margin-top: 30px;
+    }
+    .map-box {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .map-box iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+    }
+    .map-box h4 {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -17,7 +49,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="certificate.html">Certificate</a></li> <!-- LINK TO CERTIFICATE PAGE -->
+          <li><a href="certificate.html">Certificate</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -25,13 +57,16 @@
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h2>Welcome to KA20</h2>
-      <p>KA20 Group was established in 2023 at Kollur, Karnataka</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </section>
+  <!-- Home Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Welcome to KA20</h2>
+    <p class="slogan">ದುಡಿಮೆಯೇ ದೇವನ ಆರಾಧನೆ</p>
+    <p>KA20 Group was established in 2023 at Kollur, Karnataka</p>
+    <a href="#about" class="btn">Learn More</a>
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about" class="section">
@@ -47,9 +82,9 @@
         </div>
 
         <div class="leader-box">
-          <img src="img/K.jpg" alt="KA20 Chairman" class="leader-img" />
+          <img src="img/0.jpg" alt="Former Chairman" class="leader-img" />
           <h4 class="leader-name">Mr. UMESH</h4>
-          <p class="leader-title">Chairman, KA20 Group</p>
+          <p class="leader-title">Former Chairman (Resigned) – We are hiring for this post. If interested, please visit your nearest branch.</p>
         </div>
       </div>
     </div>
@@ -58,19 +93,19 @@
   <!-- Services Section -->
   <section id="services" class="section light">
     <div class="container">
-      <h3>Our Services</h3>
+      <h3>Our Support</h3>
       <div class="service-grid">
         <div class="service-box">
-          <h4>Design</h4>
-          <p>Beautiful, responsive design crafted for elegance and clarity.</p>
+          <h4>Cricket</h4>
+          <p>We support for cricket because our ohnarable founder sir play cricket .</p>
         </div>
         <div class="service-box">
-          <h4>Branding</h4>
-          <p>Building identities that leave lasting impressions.</p>
+          <h4>Agricalture</h4>
+          <p>Our group heip's farmer's to price money for aggrilture.</p>
         </div>
         <div class="service-box">
-          <h4>Consulting</h4>
-          <p>Helping you make elegant decisions in business and design.</p>
+          <h4>vollybal</h4>
+          <p>we support to children esspecially who are in primary school to play vollybal because our founder is state level in primary school</p>
         </div>
       </div>
     </div>
@@ -94,6 +129,47 @@
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
+
+      <!-- Feedback -->
+      <div class="feedback">
+        <h4>Rate Our Services</h4>
+        <div class="stars">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+      </div>
+
+      <!-- Address + Maps -->
+      <div class="map-section">
+        <div class="map-box">
+          <h4>Branch 1 – Kollur, Karnataka</h4>
+          <p>KA20 HQ, Near Bus Stand, Kollur, Karnataka 576220</p>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1202854921326!2d74.81920927493757!3d13.85920998651093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb1b5ab5e8a37%3A0x3a7d4dc19b0d1b30!2sKollur%2C%20Karnataka%20576220!5e0!3m2!1sen!2sin!4v1718350000000!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Keep your full code as is, and replace only the second iframe like this: -->
+
+<div class="map-box">
+  <h4>Branch 2 – Nagaraguddi, Karnataka</h4>
+  <p>KA20 City Branch, Kodiyalkeri to Nagaraguddi, Karnataka 575001</p>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3112.132790901156!2d74.75099!3d13.852656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUxJzA5LjYiTiA3NMKwNDUnMDMuNiJF!5e1!3m2!1sen!2sin!4v1749893436268!5m2!1sen!2sin"
+    width="600" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+      </div>
     </div>
   </section>
 
@@ -101,5 +177,27 @@
   <footer>
     <p>&copy; 2025 KA20. All rights reserved.</p>
   </footer>
+
+  <!-- Feedback Script -->
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let selected = 0;
+
+    stars.forEach((star, idx) => {
+      star.addEventListener('mouseover', () => {
+        stars.forEach((s, i) => s.classList.toggle('hovered', i <= idx));
+      });
+
+      star.addEventListener('mouseout', () => {
+        stars.forEach((s, i) => s.classList.remove('hovered'));
+      });
+
+      star.addEventListener('click', () => {
+        selected = idx + 1;
+        stars.forEach((s, i) => s.classList.toggle('selected', i < selected));
+        alert(`You rated us ${selected} star${selected > 1 ? 's' : ''}!`);
+      });
+    });
+  </script>
 </body>
 </html>

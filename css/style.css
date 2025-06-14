@@ -257,3 +257,26 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+.feedback {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.stars {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star:hover,
+.star.hovered,
+.star.selected {
+  color: gold;
+}
+.slogan {
+  font-size: 1.5rem;
+  color: #2e8b57;
+  font-weight: 600;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for a Position – KA20 Careers</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .apply-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .thank-you {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="apply-container">
+    <h2>Apply for a Position at KA20</h2>
+    <form id="applyForm">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="mobile" placeholder="Mobile Number" required />
+      <input type="text" name="position" placeholder="Position Applying For" required />
+      <textarea name="message" rows="5" placeholder="Why do you want to join KA20?" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+    <div class="thank-you" id="thankYouMsg">
+      Thank you! Our team will contact you soon. Best wishes from Nanda.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('applyForm');
+    const thankYouMsg = document.getElementById('thankYouMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent form from refreshing the page
+
+      // simulate form submission delay (optional)
+      setTimeout(() => {
+        form.style.display = 'none';  // hide form
+        thankYouMsg.style.display = 'block';  // show thank you message
+      }, 500);
+    });
+  </script>
+</body>
+</html>

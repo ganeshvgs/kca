@@ -379,4 +379,17 @@ footer {
   height: 50px;
   width: auto;
 }
+.footer-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 3px #fff); /* optional highlight */
+}
+}

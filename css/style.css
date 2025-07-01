@@ -370,3 +370,13 @@ footer {
     gap: 20px;
   }
 }
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kcs-logo {
+  height: 50px;
+  width: auto;
+}
+

@@ -7,35 +7,69 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     .apply-container {
-      max-width: 600px;
+      max-width: 650px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 25px;
       background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
     }
     h2 {
       text-align: center;
+      margin-bottom: 20px;
+      color: #333;
     }
     form {
       display: flex;
       flex-direction: column;
     }
-    input, textarea {
-      margin: 10px 0;
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    input, select, textarea {
+      margin-bottom: 15px;
       padding: 10px;
       font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
     }
     button {
       background-color: #007bff;
       color: white;
-      padding: 10px;
+      padding: 12px;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s;
     }
     button:hover {
       background-color: #0056b3;
+    }
+    .requirements {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      display: none;
+    }
+    .requirements h4 {
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+    .requirements ul {
+      margin-left: 20px;
+      list-style: disc;
     }
     .thank-you {
       display: none;
@@ -51,29 +85,93 @@
   <div class="apply-container">
     <h2>Apply for a Position at KA20</h2>
     <form id="applyForm">
-      <input type="text" name="fullname" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="mobile" placeholder="Mobile Number" required />
-      <input type="text" name="position" placeholder="Position Applying For" required />
-      <textarea name="message" rows="5" placeholder="Why do you want to join KA20?" required></textarea>
+      <label>Full Name</label>
+      <input type="text" name="fullname" placeholder="Enter your full name" required />
+
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="your@email.com" required />
+
+      <label>Mobile Number</label>
+      <input type="text" name="mobile" placeholder="+91 9876543210" required />
+
+      <label>Position Applying For</label>
+      <select name="position" id="positionSelect" required>
+        <option value="">-- Select a Role --</option>
+        <option value="Chairman">Chairman</option>
+        <option value="Graphic Designer">Graphic Designer</option>
+        <option value="Agricultural Specialist">Agricultural Specialist</option>
+        <option value="Cricket Coach">Cricket Coach</option>
+      </select>
+
+      <!-- Dynamic requirements box -->
+      <div class="requirements" id="requirementsBox">
+        <h4>Key Requirements:</h4>
+        <ul id="reqList"></ul>
+      </div>
+
+      <label>Why do you want to join KA20?</label>
+      <textarea name="message" rows="5" placeholder="Tell us about your motivation..." required></textarea>
+
       <button type="submit">Submit Application</button>
     </form>
     <div class="thank-you" id="thankYouMsg">
-      Thank you! Our team will contact you soon. Best wishes from Nanda.
+      ✅ Thank you! Our team will contact you soon. <br> Best wishes from <b>KA20 Group</b>.
     </div>
   </div>
 
   <script>
     const form = document.getElementById('applyForm');
     const thankYouMsg = document.getElementById('thankYouMsg');
+    const positionSelect = document.getElementById('positionSelect');
+    const requirementsBox = document.getElementById('requirementsBox');
+    const reqList = document.getElementById('reqList');
 
+    // Requirements data
+    const requirements = {
+      "Chairman": [
+        "15+ years leadership experience",
+        "Strategic planning expertise",
+        "Strong communication skills"
+      ],
+      "Graphic Designer": [
+        "3+ years design experience",
+        "Adobe Creative Suite proficiency",
+        "Brand development experience"
+      ],
+      "Agricultural Specialist": [
+        "Agricultural degree",
+        "Field experience",
+        "Community engagement skills"
+      ],
+      "Cricket Coach": [
+        "Cricket coaching certification",
+        "Player development experience",
+        "Youth mentoring skills"
+      ]
+    };
+
+    // Show requirements dynamically
+    positionSelect.addEventListener('change', function() {
+      const selected = this.value;
+      if (requirements[selected]) {
+        reqList.innerHTML = "";
+        requirements[selected].forEach(req => {
+          const li = document.createElement('li');
+          li.textContent = req;
+          reqList.appendChild(li);
+        });
+        requirementsBox.style.display = 'block';
+      } else {
+        requirementsBox.style.display = 'none';
+      }
+    });
+
+    // Fake submission
     form.addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent form from refreshing the page
-
-      // simulate form submission delay (optional)
+      e.preventDefault(); 
       setTimeout(() => {
-        form.style.display = 'none';  // hide form
-        thankYouMsg.style.display = 'block';  // show thank you message
+        form.style.display = 'none'; 
+        thankYouMsg.style.display = 'block';
       }, 500);
     });
   </script>
